@@ -1,0 +1,38 @@
+<!-- --- ACTIVE CASE PAGE --- -->
+
+<!-- HEADER SECTION -->
+<%- include('header') -%>
+
+<!-- NAVBAR SECTION -->
+<%- include('navbar') -%>
+
+<div id="active" style="padding-top: 4%;">
+    <div class="heading" style="margin-top: 0%; padding-top: 0%; margin-bottom: 30px;">
+        <span style="color: #0b11a8;">
+            <%= hospitalName %>
+        </span>
+    </div>
+    <div id="active-container">
+        
+        <% if(elem.length==0){ %>
+            <div class="heading"><span style="color: green;">NO CASE IS ACTIVE</span></div>
+        <% } %>
+        
+        <% for(var i=0;i<elem.length;i++){ %>
+            <div class="activeBox">
+                <div style="font-size: medium;">Patient Name: <%= elem[i]['patientName'] %></div>
+                <div style="font-size: medium;">Patient Number: <%= elem[i]['patientNum']%></div>
+                <div style="font-size: medium;">Patient Address: <%= elem[i]['patientAddress']%></div>
+                <div style="font-size: medium;">Driver Name: <%= driverName[i] %></div>
+                <div style="font-size: medium;">Driver Number: <%= driverNum[i] %></div>
+            </div>
+        <%}%>
+
+    </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<%- include('contact') -%>
+
+<!-- FOOTER SECTION -->
+<%- include('footer') -%>

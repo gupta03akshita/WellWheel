@@ -1,0 +1,39 @@
+<!-- HOSPITAL SELECTION PAGE -->
+
+<!-- HEADER SECTION -->
+<%- include('header') -%>
+
+<div id="hospital">
+	<div class="heading" style="margin-bottom: 30px">
+		<span> SELECT HOSPITAL </span>
+	</div>
+
+	<div id="hospital-list">
+		<% for(var i=0; i < hospital.length; i++) { %>
+		<div class="hospital-item">
+			<div class="hospital-name"><%= hospital[i].name %></div>
+			<div class="hospital-address"><%= hospital[i].address %></div>
+
+			<form action="/hospital" method="post">
+				<input
+					name="hospitalName"
+					value="<%= hospital[i].name %>"
+					style="display: none"
+				/>
+				<input
+					name="hospitalAddress"
+					value="<%= hospital[i].address %>"
+					style="display: none"
+				/>
+				<button type="submit" class="hospital-button">LOGIN</button>
+			</form>
+		</div>
+		<% } %>
+	</div>
+</div>
+
+<!-- CONTACT SECTION -->
+<%- include('contact') -%>
+
+<!-- FOOTER SECTION -->
+<%- include('footer') -%>

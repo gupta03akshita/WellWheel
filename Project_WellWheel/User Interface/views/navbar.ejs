@@ -1,0 +1,48 @@
+<!-- --- NAVBAR CODE --- -->
+
+<div id="navbar">
+	<div id="bar" onclick="showNav()">
+		<img src="hamburgerIcon.png" height="50px" width="55px" />
+	</div>
+	<div id="logo">
+		<div id="logoImg"><img src="/WellWheelLogo.png" alt="Logo" /></div>
+		<div id="logoName" style="color: white">WellWheel</div>
+	</div>
+
+	<div id="navItem">
+		<div class="item" onclick="location.href='/'">Home</div>
+		<div class="item" onclick="location.href='/aboutUs'">About Us</div>
+		<div class="item" onclick="location.href='/features'">Features</div>
+		<div class="item" onclick="location.href='/service'">Our Services</div>
+		<div class="item" onclick="location.href='/contactUs'">Contact Us</div>
+	</div>
+
+	<div id="navButton">
+		<button type="submit" onclick="location.href='/book'">Book Now</button>
+	</div>
+</div>
+
+
+<div id="barNav">
+	<div class="item" onclick="location.href='/';hideNav()">Home</div>
+	<div class="item" onclick="location.href='/aboutUs'; hideNav()">AboutUs</div>
+	<div class="item" onclick="location.href='/features';hideNav()">Features</div>
+	<div class="item" onclick="location.href='/service';hideNav()">
+		Our Services
+	</div>
+	<div class="item" onclick="location.href='/contactUs'; hideNav()">
+		Contact Us
+	</div>
+</div>
+
+<!-- JS CODE -->
+<script>
+	function showNav() {
+		document.getElementById("barNav").style.display = "block";
+		document.getElementById("bar").setAttribute("onclick", "hideNav()");
+	}
+	function hideNav() {
+		document.getElementById("barNav").style.display = "none";
+		document.getElementById("bar").setAttribute("onclick", "showNav()");
+	}
+</script>
