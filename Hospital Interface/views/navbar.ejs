@@ -1,0 +1,36 @@
+<!-- HEADER SECTION -->
+<%- include('header') -%>
+
+<!-- --- NAVBAR CODE --- -->
+
+<div id="navbar">
+	<div id="bar" onclick="showNav()">
+		<img src="hamburgerIcon.png" height="50px" width="55px" />
+	</div>
+    <div id="logo">
+		<div id="logoImg"><img src="/WellWheelLogo.png" alt="Logo" /></div>
+		<div id="logoName" style="color: white">WellWheel</div>
+	</div>
+
+	<div id="navItem">
+		<div class="item" onclick="location.href='/home'">CASES_PAGE</div>
+	</div>
+
+</div>
+
+
+<div id="barNav">
+	<div class="item" onclick="location.href='/home'">CASES_PAGE</div>
+</div>
+
+<!-- JS CODE -->
+<script>
+	function showNav() {
+		document.getElementById("barNav").style.display = "block";
+		document.getElementById("bar").setAttribute("onclick", "hideNav()");
+	}
+	function hideNav() {
+		document.getElementById("barNav").style.display = "none";
+		document.getElementById("bar").setAttribute("onclick", "showNav()");
+	}
+</script>

@@ -1,0 +1,30 @@
+{
+  "name": "hospital-interface",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "country-state-city": "^3.2.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "he": "^1.2.0",
+    "https": "^1.0.0",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7",
+    "unirest": "^0.6.0"
+  }
+}
